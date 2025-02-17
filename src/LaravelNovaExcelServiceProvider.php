@@ -68,7 +68,7 @@ class LaravelNovaExcelServiceProvider extends ServiceProvider
         }
 
         Route::middleware(['nova'])
-             ->prefix('nova-vendor/maatwebsite/laravel-nova-excel')
+             ->prefix(config('app.prefix') . '/nova-vendor/maatwebsite/laravel-nova-excel')
              ->group(__DIR__ . '/../routes/api.php');
     }
 }
